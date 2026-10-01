@@ -7,6 +7,10 @@
   <title>안주형 | 자기소개</title>
 
   <style>
+    /* =========================
+       기본 설정
+    ========================= */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -31,27 +35,32 @@
       line-height: 1.7;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     /* =========================
-       상단 소개
+       상단 HERO
     ========================= */
 
     .hero {
-      min-height: 520px;
+      min-height: 540px;
 
       background:
         radial-gradient(
-          circle at 80% 20%,
-          rgba(255,255,255,0.07) 0,
-          rgba(255,255,255,0.07) 120px,
-          transparent 121px
+          circle at 82% 25%,
+          rgba(255, 255, 255, 0.06) 0,
+          rgba(255, 255, 255, 0.06) 130px,
+          transparent 131px
         ),
         linear-gradient(135deg, #0c203a, #17395f);
 
       color: white;
 
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
 
       padding: 80px 24px;
     }
@@ -67,20 +76,20 @@
       margin-bottom: 25px;
       padding: 7px 14px;
 
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       border-radius: 30px;
 
       color: #d6e1ee;
+
       font-size: 13px;
       letter-spacing: 1.5px;
     }
 
     .hero h1 {
-      font-size: clamp(40px, 7vw, 68px);
-      line-height: 1.15;
-
       margin-bottom: 24px;
 
+      font-size: clamp(42px, 7vw, 70px);
+      line-height: 1.15;
       letter-spacing: -2px;
     }
 
@@ -89,9 +98,10 @@
     }
 
     .hero-description {
-      max-width: 680px;
+      max-width: 700px;
 
       color: #d5deea;
+
       font-size: 17px;
       line-height: 1.9;
     }
@@ -110,21 +120,23 @@
     .hero-line {
       width: 55px;
       height: 1px;
+
       background: #8faac6;
     }
 
     /* =========================
-       공통 본문
+       메인 공통
     ========================= */
 
     main {
       max-width: 1050px;
+
       margin: 0 auto;
       padding: 80px 24px;
     }
 
     section {
-      margin-bottom: 100px;
+      margin-bottom: 105px;
     }
 
     .section-heading {
@@ -137,6 +149,7 @@
       margin-bottom: 7px;
 
       color: #7d94ad;
+
       font-size: 13px;
       font-weight: 600;
       letter-spacing: 2px;
@@ -144,8 +157,8 @@
 
     .section-heading h2 {
       color: #102844;
-      font-size: 32px;
 
+      font-size: 32px;
       letter-spacing: -0.8px;
     }
 
@@ -157,7 +170,7 @@
     }
 
     /* =========================
-       About
+       ABOUT
     ========================= */
 
     .about {
@@ -177,6 +190,8 @@
       align-items: center;
       justify-content: center;
 
+      position: relative;
+
       background: #102844;
       color: white;
 
@@ -185,8 +200,6 @@
       font-size: 52px;
       font-weight: 700;
       letter-spacing: -2px;
-
-      position: relative;
     }
 
     .initial-box::after {
@@ -197,22 +210,23 @@
       width: 180px;
       height: 180px;
 
-      border: 1px solid #aab8c6;
-
       top: 12px;
       left: 12px;
+
+      border: 1px solid #aab8c6;
 
       z-index: -1;
     }
 
     .about-text {
-      font-size: 17px;
       color: #4d5661;
+
+      font-size: 17px;
       line-height: 2;
     }
 
     /* =========================
-       관심 분야
+       INTERESTS
     ========================= */
 
     .interest-grid {
@@ -223,41 +237,105 @@
     }
 
     .interest-item {
-      padding: 32px 25px 32px 0;
+      padding: 32px 28px 32px 0;
 
       border-bottom: 1px solid #d7dce2;
     }
 
     .interest-item:nth-child(even) {
       padding-left: 32px;
+
       border-left: 1px solid #d7dce2;
     }
 
-    .interest-item .small {
+    .small-label {
       display: block;
 
       margin-bottom: 12px;
 
       color: #8896a5;
+
       font-size: 12px;
+      font-weight: 600;
       letter-spacing: 2px;
     }
 
     .interest-item h3 {
-      color: #102844;
-
       margin-bottom: 10px;
+
+      color: #102844;
 
       font-size: 22px;
     }
 
     .interest-item p {
       color: #69717c;
+
       font-size: 15px;
     }
 
     /* =========================
-       취미
+       CURRENT FOCUS
+    ========================= */
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 14px;
+    }
+
+    .focus-card {
+      min-height: 190px;
+
+      padding: 26px 22px;
+
+      background: white;
+
+      border: 1px solid #dce1e6;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #aeb9c5;
+
+      box-shadow: 0 12px 26px rgba(16, 40, 68, 0.07);
+    }
+
+    .focus-number {
+      display: block;
+
+      margin-bottom: 28px;
+
+      color: #9ba8b5;
+
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .focus-card h3 {
+      margin-bottom: 8px;
+
+      color: #102844;
+
+      font-size: 19px;
+    }
+
+    .focus-card p {
+      color: #737c87;
+
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       LIFESTYLE
     ========================= */
 
     .hobby-list {
@@ -267,13 +345,12 @@
     }
 
     .hobby-item {
-      display: grid;
+      min-height: 120px;
 
+      display: grid;
       grid-template-columns: 90px 180px 1fr;
 
       align-items: center;
-
-      min-height: 120px;
 
       border-bottom: 1px solid #dce1e6;
 
@@ -285,9 +362,9 @@
     }
 
     .hobby-number {
-      color: #98a3af;
-
       padding-left: 20px;
+
+      color: #98a3af;
 
       font-size: 13px;
       letter-spacing: 1px;
@@ -301,30 +378,107 @@
     }
 
     .hobby-description {
-      color: #6b737e;
-
       padding-right: 20px;
+
+      color: #6b737e;
 
       font-size: 15px;
     }
 
     /* =========================
-       키워드
+       UNIVERSITY LIFE
+    ========================= */
+
+    .timeline {
+      position: relative;
+
+      padding-left: 34px;
+    }
+
+    .timeline::before {
+      content: "";
+
+      position: absolute;
+
+      top: 8px;
+      bottom: 8px;
+      left: 6px;
+
+      width: 1px;
+
+      background: #cfd6de;
+    }
+
+    .timeline-item {
+      position: relative;
+
+      padding: 0 0 35px 22px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+
+      position: absolute;
+
+      width: 11px;
+      height: 11px;
+
+      left: -33px;
+      top: 8px;
+
+      background: #102844;
+
+      border-radius: 50%;
+    }
+
+    .timeline-year {
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: #8191a2;
+
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 7px;
+
+      color: #102844;
+
+      font-size: 20px;
+    }
+
+    .timeline-item p {
+      color: #6b737e;
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       KEYWORDS
     ========================= */
 
     .keyword-list {
       display: flex;
       flex-wrap: wrap;
+
       gap: 10px;
     }
 
     .keyword {
       padding: 11px 18px;
 
+      background: white;
+
       border: 1px solid #cfd6de;
       border-radius: 4px;
-
-      background: white;
 
       color: #34495f;
 
@@ -339,21 +493,113 @@
     .keyword:hover {
       background: #102844;
       color: white;
+
       border-color: #102844;
     }
 
     /* =========================
-       목표
+       MORE ABOUT ME
+    ========================= */
+
+    .more-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      background: white;
+
+      border-top: 1px solid #dce1e6;
+      border-left: 1px solid #dce1e6;
+    }
+
+    .more-item {
+      padding: 28px;
+
+      border-right: 1px solid #dce1e6;
+      border-bottom: 1px solid #dce1e6;
+    }
+
+    .more-question {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #8595a6;
+
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+
+    .more-answer {
+      color: #102844;
+
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    /* =========================
+       VALUES
+    ========================= */
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .value-card {
+      position: relative;
+
+      min-height: 225px;
+
+      padding: 30px;
+
+      background: #ffffff;
+
+      border-top: 3px solid #102844;
+      box-shadow: 0 8px 22px rgba(16, 40, 68, 0.05);
+    }
+
+    .value-number {
+      display: block;
+
+      margin-bottom: 28px;
+
+      color: #9aa6b2;
+
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .value-card h3 {
+      margin-bottom: 10px;
+
+      color: #102844;
+
+      font-size: 22px;
+    }
+
+    .value-card p {
+      color: #6c7580;
+
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* =========================
+       GOAL
     ========================= */
 
     .goal {
-      padding: 70px 55px;
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 72px 55px;
 
       background: #102844;
       color: white;
-
-      position: relative;
-      overflow: hidden;
     }
 
     .goal::after {
@@ -361,14 +607,29 @@
 
       position: absolute;
 
-      width: 240px;
-      height: 240px;
+      width: 260px;
+      height: 260px;
 
-      border: 1px solid rgba(255,255,255,0.1);
+      right: -75px;
+      bottom: -110px;
+
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 50%;
+    }
 
-      right: -70px;
-      bottom: -100px;
+    .goal::before {
+      content: "";
+
+      position: absolute;
+
+      width: 150px;
+      height: 150px;
+
+      right: 35px;
+      bottom: -65px;
+
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 50%;
     }
 
     .goal-label {
@@ -383,18 +644,17 @@
     }
 
     .goal h2 {
-      max-width: 700px;
+      max-width: 730px;
 
       margin-bottom: 22px;
 
-      font-size: clamp(27px, 4vw, 40px);
+      font-size: clamp(28px, 4vw, 41px);
       line-height: 1.5;
-
       letter-spacing: -1px;
     }
 
     .goal p {
-      max-width: 650px;
+      max-width: 670px;
 
       color: #c4d0dd;
 
@@ -403,17 +663,17 @@
     }
 
     /* =========================
-       푸터
+       FOOTER
     ========================= */
 
     footer {
       max-width: 1050px;
 
       margin: 0 auto;
-
       padding: 0 24px 40px;
 
       color: #929aa4;
+
       font-size: 13px;
     }
 
@@ -426,8 +686,19 @@
     }
 
     /* =========================
-       모바일
+       반응형
     ========================= */
+
+    @media (max-width: 850px) {
+
+      .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     @media (max-width: 700px) {
 
@@ -449,8 +720,14 @@
       }
 
       section {
-        margin-bottom: 75px;
+        margin-bottom: 78px;
       }
+
+      .section-heading h2 {
+        font-size: 27px;
+      }
+
+      /* ABOUT */
 
       .about {
         grid-template-columns: 1fr;
@@ -473,6 +750,8 @@
         font-size: 16px;
       }
 
+      /* INTEREST */
+
       .interest-grid {
         grid-template-columns: 1fr;
       }
@@ -483,8 +762,17 @@
 
       .interest-item:nth-child(even) {
         padding: 26px 5px;
+
         border-left: none;
       }
+
+      /* FOCUS */
+
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* HOBBY */
 
       .hobby-item {
         grid-template-columns: 60px 1fr;
@@ -503,12 +791,16 @@
         padding-right: 10px;
       }
 
-      .goal {
-        padding: 48px 28px;
+      /* MORE */
+
+      .more-grid {
+        grid-template-columns: 1fr;
       }
 
-      .section-heading h2 {
-        font-size: 27px;
+      /* GOAL */
+
+      .goal {
+        padding: 48px 28px;
       }
     }
   </style>
@@ -516,7 +808,7 @@
 
 <body>
 
-  <!-- 상단 소개 -->
+  <!-- HERO -->
   <header class="hero">
 
     <div class="hero-inner">
@@ -545,16 +837,26 @@
 
   </header>
 
+
   <main>
 
-    <!-- ABOUT -->
+    <!-- 01 ABOUT -->
     <section>
 
       <div class="section-heading">
-        <span class="section-number">01 · ABOUT</span>
+
+        <span class="section-number">
+          01 · ABOUT
+        </span>
+
         <h2>About Me</h2>
-        <p>저에 대한 간단한 소개입니다.</p>
+
+        <p>
+          저에 대한 간단한 소개입니다.
+        </p>
+
       </div>
+
 
       <div class="about">
 
@@ -577,30 +879,47 @@
     </section>
 
 
-    <!-- INTERESTS -->
+    <!-- 02 INTERESTS -->
     <section>
 
       <div class="section-heading">
-        <span class="section-number">02 · INTERESTS</span>
+
+        <span class="section-number">
+          02 · INTERESTS
+        </span>
+
         <h2>My Interests</h2>
-        <p>현재 공부하고 관심을 가지고 있는 분야입니다.</p>
+
+        <p>
+          현재 공부하고 관심을 가지고 있는 분야입니다.
+        </p>
+
       </div>
+
 
       <div class="interest-grid">
 
         <div class="interest-item">
-          <span class="small">MAJOR</span>
+
+          <span class="small-label">
+            MAJOR
+          </span>
 
           <h3>경영학</h3>
 
           <p>
-            기업과 시장을 이해하기 위해
-            마케팅, 경영전략, 유통 등 다양한 분야를 공부하고 있습니다.
+            기업과 시장을 이해하기 위해 마케팅,
+            경영전략, 유통 등 다양한 분야를 공부하고 있습니다.
           </p>
+
         </div>
 
+
         <div class="interest-item">
-          <span class="small">INTEREST</span>
+
+          <span class="small-label">
+            INTEREST
+          </span>
 
           <h3>유통</h3>
 
@@ -608,6 +927,7 @@
             상품이 소비자에게 전달되는 과정과
             유통 산업의 변화, 소비자의 구매 행동에 관심이 있습니다.
           </p>
+
         </div>
 
       </div>
@@ -615,14 +935,111 @@
     </section>
 
 
-    <!-- HOBBY -->
+    <!-- 03 CURRENT FOCUS -->
     <section>
 
       <div class="section-heading">
-        <span class="section-number">03 · LIFESTYLE</span>
-        <h2>What I Like</h2>
-        <p>일상에서 즐겨 하는 것들입니다.</p>
+
+        <span class="section-number">
+          03 · CURRENT FOCUS
+        </span>
+
+        <h2>Current Focus</h2>
+
+        <p>
+          요즘 특히 관심 있게 살펴보고 있는 주제입니다.
+        </p>
+
       </div>
+
+
+      <div class="focus-grid">
+
+        <div class="focus-card">
+
+          <span class="focus-number">
+            01
+          </span>
+
+          <h3>유통 산업</h3>
+
+          <p>
+            오프라인과 온라인 유통 환경이
+            어떻게 변화하고 있는지 관심 있게 보고 있습니다.
+          </p>
+
+        </div>
+
+
+        <div class="focus-card">
+
+          <span class="focus-number">
+            02
+          </span>
+
+          <h3>소비자 행동</h3>
+
+          <p>
+            소비자가 어떤 이유로 제품을 선택하고
+            구매하는지에 관심이 있습니다.
+          </p>
+
+        </div>
+
+
+        <div class="focus-card">
+
+          <span class="focus-number">
+            03
+          </span>
+
+          <h3>마케팅</h3>
+
+          <p>
+            제품과 브랜드가 소비자에게
+            어떻게 전달되는지 알아가는 중입니다.
+          </p>
+
+        </div>
+
+
+        <div class="focus-card">
+
+          <span class="focus-number">
+            04
+          </span>
+
+          <h3>진로 탐색</h3>
+
+          <p>
+            다양한 분야를 경험하며
+            저에게 잘 맞는 진로를 찾아가고 있습니다.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 04 LIFESTYLE -->
+    <section>
+
+      <div class="section-heading">
+
+        <span class="section-number">
+          04 · LIFESTYLE
+        </span>
+
+        <h2>What I Like</h2>
+
+        <p>
+          일상에서 즐겨 하는 것들입니다.
+        </p>
+
+      </div>
+
 
       <div class="hobby-list">
 
@@ -684,24 +1101,123 @@
     </section>
 
 
-    <!-- KEYWORDS -->
+    <!-- 05 UNIVERSITY LIFE -->
     <section>
 
       <div class="section-heading">
-        <span class="section-number">04 · KEYWORDS</span>
-        <h2>My Keywords</h2>
-        <p>저를 표현하는 몇 가지 키워드입니다.</p>
+
+        <span class="section-number">
+          05 · UNIVERSITY LIFE
+        </span>
+
+        <h2>University Life</h2>
+
+        <p>
+          대학생활을 통해 조금씩 관심 분야를 넓혀가고 있습니다.
+        </p>
+
       </div>
+
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">
+            FIRST STEP
+          </span>
+
+          <h3>경영학의 기초 배우기</h3>
+
+          <p>
+            대학에 입학한 뒤 경영학의 여러 기초 분야를 배우며
+            기업과 시장을 바라보는 기본적인 시각을 익혔습니다.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">
+            EXPLORATION
+          </span>
+
+          <h3>다양한 전공 분야 경험</h3>
+
+          <p>
+            여러 전공 과목을 공부하면서
+            제가 흥미를 느끼는 분야가 무엇인지 탐색해 왔습니다.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">
+            NOW
+          </span>
+
+          <h3>유통 분야에 관심</h3>
+
+          <p>
+            현재는 유통과 소비자 행동을 중심으로
+            관심 분야를 조금 더 구체화하고 있습니다.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">
+            NEXT
+          </span>
+
+          <h3>경험을 통한 진로 탐색</h3>
+
+          <p>
+            앞으로는 전공 공부뿐 아니라 다양한 경험을 통해
+            저와 잘 맞는 분야를 찾아가고 싶습니다.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 06 KEYWORDS -->
+    <section>
+
+      <div class="section-heading">
+
+        <span class="section-number">
+          06 · KEYWORDS
+        </span>
+
+        <h2>My Keywords</h2>
+
+        <p>
+          저를 표현하는 몇 가지 키워드입니다.
+        </p>
+
+      </div>
+
 
       <div class="keyword-list">
 
         <span class="keyword">경영학</span>
         <span class="keyword">유통</span>
+        <span class="keyword">소비자</span>
         <span class="keyword">음악</span>
         <span class="keyword">독서</span>
         <span class="keyword">산책</span>
         <span class="keyword">워라밸</span>
         <span class="keyword">여유</span>
+        <span class="keyword">꾸준함</span>
         <span class="keyword">새로운 경험</span>
 
       </div>
@@ -709,11 +1225,188 @@
     </section>
 
 
-    <!-- GOAL -->
+    <!-- 07 MORE ABOUT ME -->
+    <section>
+
+      <div class="section-heading">
+
+        <span class="section-number">
+          07 · A LITTLE MORE
+        </span>
+
+        <h2>A Little More About Me</h2>
+
+        <p>
+          조금 더 가볍게 알아보는 저의 취향입니다.
+        </p>
+
+      </div>
+
+
+      <div class="more-grid">
+
+        <div class="more-item">
+
+          <span class="more-question">
+            MAJOR
+          </span>
+
+          <span class="more-answer">
+            경영학
+          </span>
+
+        </div>
+
+
+        <div class="more-item">
+
+          <span class="more-question">
+            MAIN INTEREST
+          </span>
+
+          <span class="more-answer">
+            유통과 소비자 행동
+          </span>
+
+        </div>
+
+
+        <div class="more-item">
+
+          <span class="more-question">
+            FAVORITE TIME
+          </span>
+
+          <span class="more-answer">
+            여유롭게 쉴 수 있는 시간
+          </span>
+
+        </div>
+
+
+        <div class="more-item">
+
+          <span class="more-question">
+            WAY TO RELAX
+          </span>
+
+          <span class="more-answer">
+            음악을 듣거나 산책하기
+          </span>
+
+        </div>
+
+
+        <div class="more-item">
+
+          <span class="more-question">
+            WHAT I ENJOY
+          </span>
+
+          <span class="more-answer">
+            새로운 것을 알아가는 과정
+          </span>
+
+        </div>
+
+
+        <div class="more-item">
+
+          <span class="more-question">
+            LIFE STYLE
+          </span>
+
+          <span class="more-answer">
+            균형과 여유가 있는 생활
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 08 VALUES -->
+    <section>
+
+      <div class="section-heading">
+
+        <span class="section-number">
+          08 · VALUES
+        </span>
+
+        <h2>What I Value</h2>
+
+        <p>
+          생활과 진로에서 중요하게 생각하는 가치입니다.
+        </p>
+
+      </div>
+
+
+      <div class="value-grid">
+
+        <div class="value-card">
+
+          <span class="value-number">
+            VALUE 01
+          </span>
+
+          <h3>균형</h3>
+
+          <p>
+            해야 할 일에 충실하면서도
+            개인의 시간과 여유를 함께 지키는
+            삶을 중요하게 생각합니다.
+          </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+          <span class="value-number">
+            VALUE 02
+          </span>
+
+          <h3>꾸준한 성장</h3>
+
+          <p>
+            한 번에 큰 변화를 만들기보다는
+            새로운 경험과 배움을 통해
+            조금씩 성장하는 것을 중요하게 생각합니다.
+          </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+          <span class="value-number">
+            VALUE 03
+          </span>
+
+          <h3>안정과 여유</h3>
+
+          <p>
+            무리하게 앞서가기보다는
+            제가 지속할 수 있는 속도로 안정적이고
+            만족스러운 삶을 만들어가고 싶습니다.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 09 GOAL -->
     <section class="goal">
 
       <span class="goal-label">
-        05 · MY GOAL
+        09 · MY GOAL
       </span>
 
       <h2>
@@ -732,6 +1425,7 @@
   </main>
 
 
+  <!-- FOOTER -->
   <footer>
 
     <div class="footer-line"></div>
